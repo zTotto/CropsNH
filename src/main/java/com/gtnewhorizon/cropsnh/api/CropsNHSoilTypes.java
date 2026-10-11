@@ -35,6 +35,8 @@ public final class CropsNHSoilTypes {
     public static final ISoilList gravel = SoilRegistry.instance.get("gravel");
     /** contains oil Sand ores */
     public static final ISoilList oilSands = SoilRegistry.instance.get("oilSands");
+    /** For crops that grow in shallow water, like rice: clay and mud */
+    public static final ISoilList wetland = SoilRegistry.instance.get("wetland");
 
     public static final ISoilList mushroom = new CompoundSoilList("mushroom", stone, dirtGrass, mycelium);
     public static final ISoilList netherMushroom = new CompoundSoilList("netherMushroom", mushroom, netherrack);
