@@ -8,6 +8,7 @@ import com.gtnewhorizon.cropsnh.api.CropsNHSoilTypes;
 import com.gtnewhorizon.cropsnh.farming.registries.SoilTramplingResistanceRegistry;
 import com.gtnewhorizon.cropsnh.utility.ModUtils;
 
+import cpw.mods.fml.common.registry.GameRegistry;
 import tconstruct.tools.TinkerTools;
 import thaumcraft.common.config.ConfigBlocks;
 
@@ -125,5 +126,15 @@ public class SoilLoader {
             CropsNHSoilTypes.farmland.registerBlock(gardenSoil);
         }
 
+        // wet soils for the water crops
+        CropsNHSoilTypes.wetland.registerBlock(new BlockWithMeta(Blocks.clay));
+        if (ModUtils.BiomesOPlenty.isModLoaded()) {
+            CropsNHSoilTypes.wetland.registerBlock(new BlockWithMeta(ModUtils.BiomesOPlenty.getBlock("mud"), 0));
+        }
+        // et futurum's mud can be turned off in its config
+        Block efrMud = GameRegistry.findBlock(ModUtils.EtFuturumRequiem.ID, "mud");
+        if (efrMud != null) {
+            CropsNHSoilTypes.wetland.registerBlock(new BlockWithMeta(efrMud));
+        }
     }
 }
