@@ -82,6 +82,7 @@ public final class WitcheryCrops {
             .register();
         CropsNHCrops.Garlic = CropFamilies.food("garlic", 0xA88F7B, 0xF3E7DC)
             .seeds("cropGarlic")
+            .when(ModUtils.PamsHarvestCraft, b -> b.seeds("seedGarlic"))
             .drop("cropGarlic", 100_00)
             .likes(PLAINS, DRY)
             .creator("bartimaeusnek")

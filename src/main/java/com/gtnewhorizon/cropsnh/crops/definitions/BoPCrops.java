@@ -81,6 +81,11 @@ public final class BoPCrops {
         CropsNHCrops.Bamboo = CropBuilder.crop("bamboo", 0x83A81A, 0xC7DB72)
             .drop(CropsNHUtils.getModItem(ModUtils.BiomesOPlenty, "bamboo", 2, 0), 100_00)
             .seed(CropsNHUtils.getModItem(ModUtils.BiomesOPlenty, "saplings", 1, 2))
+            // pam's edible bamboo shoots
+            .when(
+                ModUtils.PamsHarvestCraft,
+                b -> b.drop(CropsNHUtils.getModItem(ModUtils.PamsHarvestCraft, "bambooshootItem", 1, 0), 50_00)
+                    .seeds("seedBambooshoot", "cropBambooshoot"))
             // bamboo forest
             .likes(DENSE, JUNGLE, LUSH, FOREST)
             .creator("Minepolz320")

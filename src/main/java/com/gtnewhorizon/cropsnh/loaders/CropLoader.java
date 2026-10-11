@@ -7,6 +7,7 @@ import com.gtnewhorizon.cropsnh.crops.CropWeed;
 import com.gtnewhorizon.cropsnh.crops.definitions.BoPCrops;
 import com.gtnewhorizon.cropsnh.crops.definitions.BonsaiCrops;
 import com.gtnewhorizon.cropsnh.crops.definitions.FoodCrops;
+import com.gtnewhorizon.cropsnh.crops.definitions.HarvestCraftCrops;
 import com.gtnewhorizon.cropsnh.crops.definitions.MaterialCrops;
 import com.gtnewhorizon.cropsnh.crops.definitions.MobCrops;
 import com.gtnewhorizon.cropsnh.crops.definitions.NaturaCrops;
@@ -38,6 +39,7 @@ public class CropLoader {
         StoneLilyCrops.register();
         VanillaCrops.register();
         WitcheryCrops.register();
+        HarvestCraftCrops.register();
     }
 
     public static void loadComplete() {

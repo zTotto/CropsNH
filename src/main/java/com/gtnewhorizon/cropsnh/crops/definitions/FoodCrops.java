@@ -73,6 +73,7 @@ public final class FoodCrops {
         CropsNHCrops.Coffee = CropFamilies.food("coffee", 0x3D1E00, 0x964F05)
             .drop("cropCoffee", 10_000)
             .seeds("cropCoffee")
+            .when(ModUtils.PamsHarvestCraft, b -> b.seeds("seedCoffee"))
             // likes warm temperatures, usually found in the same area as rainforests.
             .likes(HOT, LUSH, WET)
             .tier(7)
