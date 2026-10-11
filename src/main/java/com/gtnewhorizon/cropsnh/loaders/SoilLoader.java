@@ -127,7 +127,6 @@ public class SoilLoader {
         }
 
         // wet soils for the water crops
-        CropsNHSoilTypes.wetland.registerBlock(new BlockWithMeta(Blocks.clay));
         if (ModUtils.BiomesOPlenty.isModLoaded()) {
             CropsNHSoilTypes.wetland.registerBlock(new BlockWithMeta(ModUtils.BiomesOPlenty.getBlock("mud"), 0));
         }

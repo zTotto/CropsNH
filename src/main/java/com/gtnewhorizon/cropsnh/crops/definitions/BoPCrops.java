@@ -85,7 +85,8 @@ public final class BoPCrops {
             .when(
                 ModUtils.PamsHarvestCraft,
                 b -> b.drop(CropsNHUtils.getModItem(ModUtils.PamsHarvestCraft, "bambooshootItem", 1, 0), 50_00)
-                    .seeds("seedBambooshoot", "cropBambooshoot"))
+                    .seeds("seedBambooshoot")
+                    .seed(CropsNHUtils.getModItem(ModUtils.PamsHarvestCraft, "bambooshootItem", 1, 0)))
             // bamboo forest
             .likes(DENSE, JUNGLE, LUSH, FOREST)
             .creator("Minepolz320")
